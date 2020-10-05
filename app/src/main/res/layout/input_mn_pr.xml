@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--start header-->
+            <LinearLayout
+                android:id="@+id/layout-header"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/header_pr">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="55.84dp"
+                        android:layout_gravity="end"
+                        android:src="@drawable/logo_white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="30dp"
+                        android:fontFamily="@font/mitr"
+                        android:text="เพิ่มข้อมูล"
+                        android:textColor="@color/White"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- input manual pulse rate -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ข้อมูลชีพจร"
+                    android:textColor="@color/color9F3E01"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/mitr"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="20dp"/>
+                <!-- background input block -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:background="@drawable/rectangle_pr"
+                    android:orientation="vertical">
+                    <!-- text and edit text layout -->
+                    <!-- line 1 : sys -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="40dp"
+                        android:layout_marginVertical="30dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:text="Pulse Rate"
+                            android:textColor="@color/White"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:textColor="@color/White"
+                            android:textColorHint="@color/White"
+                            android:textColorLink="@color/White"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_weight="3"
+                            android:text="bpm"
+                            android:textColor="@color/White"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:gravity="center"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- update blood pressure data layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="30dp">
+
+                    <!-- update blood pressure data button -->
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_update_pr"
+                        android:text="บันทึกข้อมูล"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/White"
+                        android:fontFamily="@font/mitr"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--start header-->
+            <LinearLayout
+                android:id="@+id/layout-header"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/header_bp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="55.84dp"
+                        android:src="@drawable/logo_white"
+                        android:layout_gravity="end"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="30dp"
+                        android:fontFamily="@font/mitr"
+                        android:text="ประวัติ"
+                        android:textColor="@color/color014B6F"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- header log -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="วัน/เดือน/ปี"
+                    android:textColor="@color/Grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/mitr"
+                    android:layout_marginHorizontal="50dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SYS"
+                    android:textColor="@color/Grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/mitr"
+                    android:layout_marginHorizontal="30dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DIA"
+                    android:textColor="@color/Grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/mitr"
+                    android:layout_marginHorizontal="30dp"/>
+            </LinearLayout>
+
+            <!-- log history blood pressure-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

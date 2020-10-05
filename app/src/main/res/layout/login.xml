@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorF9F9F9">
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/ehr_logo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginVertical="15dp"
+            android:drawableStart="@drawable/ic_person_outline"
+            android:maxEms="10"
+            android:fontFamily="@font/mitr"
+            android:inputType="textPersonName"
+            android:text=""
+            android:hint="ชื่อผู้ใช้งาน"
+            android:textColor="@color/Theme"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColorHint="@color/LightGrey"/>
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="80dp"
+            android:drawableStart="@drawable/ic_lock"
+            android:ems="10"
+            android:fontFamily="@font/mitr"
+            android:inputType="textPersonName|textPassword"
+            android:text=""
+            android:hint="รหัสผ่าน"
+            android:textColor="@color/Theme"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColorHint="@color/LightGrey"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_login"
+            android:onClick="onClick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/btn_theme_solid"
+            android:fontFamily="@font/mitr"
+            android:padding="10dp"
+            android:text="เข้าสู่ระบบ"
+            android:textColor="@color/White"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_register"
+            android:onClick="onClick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="80dp"
+            android:layout_marginVertical="10dp"
+            android:background="@drawable/btn_theme_line"
+            android:fontFamily="@font/mitr"
+            android:padding="10dp"
+            android:text="ลงทะเบียน"
+            android:textColor="@color/Theme"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

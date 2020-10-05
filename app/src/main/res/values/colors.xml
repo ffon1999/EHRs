@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Primary">#000000</color>
+    <color name="PrimaryDark">#1C1C1C</color>
+    <color name="White">#ffffff</color>
+    <color name="colorF9F9F9">#F9F9F9</color>
+    <color name="colorF0F0F0">#F0F0F0</color>
+    <color name="LightGrey">#B5B5B5</color>
+    <color name="Grey">#828282</color>
+    <color name="Theme">#03ADB8</color>
+
+    <!-- blue (blood pressure) set -->
+    <color name="color95C5DC">#95C5DC</color>
+    <color name="color00ADFF">#00ADFF</color>
+    <color name="color0082BF">#0082BF</color>
+    <color name="color006C9F">#006C9F</color>
+    <color name="color005680">#005680</color>
+    <color name="color014B6F">#014B6F</color>
+
+    <!-- orange (pulse rate) set -->
+    <color name="colorF0995B">#F0995B</color>
+    <color name="colorEE8840">#EE8840</color>
+    <color name="colorE77F35">#E77F35</color>
+    <color name="colorD45301">#D45301</color>
+    <color name="color9F3E01">#9F3E01</color>
+    <color name="color6A2A01">#6A2A01</color>
+    <color name="color351500">#351500</color>
+
+
+    <!-- green (temperature) set -->
+    <color name="color34BAB2">#34BAB2</color>
+    <color name="color0E9088">#0E9088</color>
+    <color name="color0A6761">#0A6761</color>
+    <color name="color063E3A">#063E3A</color>
+    <color name="color087B8D">#087B8D</color>
+    <color name="color056D88">#056D88</color>
+
+
+    <!-- purple (weight) set -->
+    <color name="colorCEAFFF">#CEAFFF</color>
+    <color name="colorA372F3">#A372F3</color>
+    <color name="color7A56B6">#7A56B6</color>
+    <color name="color6330B6">#6330B6</color>
+    <color name="color51249A">#51249A</color>
+    <color name="color331760">#331760</color>
+    <color name="color1E0E3A">#1E0E3A</color>
+
+
+    <!-- darkblue (height) -->
+    <color name="color5A8BA3">#5A8BA3</color>
+    <color name="color44687A">#44687A</color>
+    <color name="color004160">#004160</color>
+    <color name="color22343D">#22343D</color>
+    <color name="color0D3244">#0D3244</color>
+    <color name="color19252B">#19252B</color>
+
+    <!-- red (glucose) set -->
+    <color name="colorA10000">#A10000</color>
+    <color name="color730000">#730000</color>
+    <color name="color450000">#450000</color>
+
+</resources>
+
