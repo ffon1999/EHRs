@@ -1,5 +1,6 @@
 package com.example.ehrs
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.transition.AutoTransition
@@ -47,6 +48,26 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home)
 
+        val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
+
+        val username =sharedPreferences.getString("Username","0")
+        val numberBPHeight =sharedPreferences.getString("NumberBPHeight","0")
+        val numberBPLow =sharedPreferences.getString("NumberBPLow","0")
+        val numberPR =sharedPreferences.getString("NumberPR","0")
+        val numberTemp =sharedPreferences.getString("NumberTemp","0")
+        val numberWeight =sharedPreferences.getString("NumberWeight","0")
+        val numberHeight =sharedPreferences.getString("NumberHeight","0")
+        val numberGlucose =sharedPreferences.getString("NumberGlucose","0")
+
+        /* Set data to text  */
+        username_home.text = "$username"
+        num1_bp.text = "$numberBPHeight"
+        num2_bp.text = "$numberBPLow"
+        num_pr.text = "$numberPR"
+        num_temp.text = "$numberTemp"
+        num_weight.text = "$numberWeight"
+        num_height.text = "$numberHeight"
+        num_glucose.text = "$numberGlucose"
 
         expendableViewBP = findViewById(R.id.expandableViewBP)
         expendableViewPR = findViewById(R.id.expandableViewPR)
