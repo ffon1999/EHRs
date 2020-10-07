@@ -61,7 +61,7 @@
                 android:textStyle="bold"
                 android:textSize="35sp"
                 android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginTop="10dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -69,23 +69,16 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="5dp"
                 android:layout_marginHorizontal="20dp">
+
                 <TextView
+                    android:id="@+id/username_home"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ชิตพล"
+                    android:text="Chittapon"
                     android:textSize="25sp"
                     android:textStyle="bold"
                     android:textColor="@color/White"
                     android:fontFamily="@font/mitr"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ลี้ชัยพรกุล"
-                    android:textSize="25sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/White"
-                    android:fontFamily="@font/mitr"
-                    android:layout_marginHorizontal="15dp"/>
 
             </LinearLayout>
 
@@ -140,6 +133,7 @@
                                     android:orientation="vertical">
 
                                     <TextView
+                                        android:id="@+id/num1_bp"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:gravity="center"
@@ -185,6 +179,7 @@
                                     android:orientation="vertical">
 
                                     <TextView
+                                        android:id="@+id/num2_bp"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:gravity="center"
@@ -321,6 +316,7 @@
                                         android:orientation="vertical">
 
                                         <TextView
+                                            android:id="@+id/num_pr"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:gravity="center"
@@ -445,6 +441,7 @@
                                         android:orientation="vertical">
 
                                         <TextView
+                                            android:id="@+id/num_temp"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:gravity="center"
@@ -566,6 +563,7 @@
                                         android:orientation="vertical">
 
                                         <TextView
+                                            android:id="@+id/num_weight"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:gravity="center"
@@ -677,6 +675,7 @@
                                         android:orientation="vertical">
 
                                         <TextView
+                                            android:id="@+id/num_hight"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:gravity="center"
@@ -799,6 +798,7 @@
                                         android:orientation="vertical">
 
                                         <TextView
+                                            android:id="@+id/num_glucose"
                                             android:layout_width="match_parent"
                                             android:layout_height="wrap_content"
                                             android:gravity="center"
