@@ -133,7 +133,7 @@
                                     android:orientation="vertical">
 
                                     <TextView
-                                        android:id="num1_bp"
+                                        android:id="@+id/num1_bp"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:gravity="center"
