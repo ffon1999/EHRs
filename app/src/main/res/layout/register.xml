@@ -17,7 +17,7 @@
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="55.84dp"
-                android:src="@drawable/ehr_logo"
+                android:src="@drawable/logo"
                 android:layout_gravity="end"
                 android:layout_margin="20dp"/>
 
@@ -35,7 +35,7 @@
                     android:textStyle="bold"
                     android:fontFamily="@font/mitr"
                     android:layout_gravity="center"
-                    android:layout_marginTop="50dp"/>
+                    android:layout_marginTop="10dp"/>
             </LinearLayout>
 
             <!--form register-->
@@ -44,98 +44,114 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginVertical="10dp"
-                android:layout_marginHorizontal="60dp">
+                android:layout_marginHorizontal="60dp"
+                android:background="@drawable/btn_theme_solid">
 
-                <EditText
-                    android:layout_width="250dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="ชื่อผู้ใช้งาน"
-                    android:textColorHint="@color/Theme"
-                    android:textColor="@color/color004160"
-                    android:textStyle="bold"
-                    android:backgroundTint="@color/Theme"
-                    android:layout_gravity="center"
-                    android:inputType="text"
-                    android:layout_marginVertical="20dp"/>
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:hint="รหัสผ่าน"
-                    android:textColorHint="@color/Theme"
-                    android:textColor="@color/color004160"
-                    android:textStyle="bold"
-                    android:backgroundTint="@color/Theme"
-                    android:layout_gravity="center"
-                    android:inputType="textPassword"
-                    android:layout_marginVertical="20dp"/>
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:hint="ยืนยันรหัสผ่าน"
-                    android:textColorHint="@color/Theme"
-                    android:textColor="@color/color004160"
-                    android:textStyle="bold"
-                    android:backgroundTint="@color/Theme"
-                    android:layout_gravity="center"
-                    android:inputType="textPassword"
-                    android:layout_marginVertical="20dp"/>
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:hint="ชื่อ"
-                    android:textColorHint="@color/Theme"
-                    android:textColor="@color/color004160"
-                    android:textStyle="bold"
-                    android:backgroundTint="@color/Theme"
-                    android:layout_gravity="center"
-                    android:inputType="text"
-                    android:layout_marginVertical="20dp"/>
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:hint="นามสกุล"
-                    android:textColorHint="@color/Theme"
-                    android:textColor="@color/color004160"
-                    android:textStyle="bold"
-                    android:backgroundTint="@color/Theme"
-                    android:layout_gravity="center"
-                    android:inputType="text"
-                    android:layout_marginVertical="20dp"/>
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:hint="อายุ"
-                    android:textColorHint="@color/Theme"
-                    android:textColor="@color/color004160"
-                    android:textStyle="bold"
-                    android:backgroundTint="@color/Theme"
-                    android:layout_gravity="center"
-                    android:inputType="numberDecimal"
-                    android:layout_marginVertical="20dp"
-                    android:maxEms="2"/>
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:hint="เบอร์มือถือ"
-                    android:textColorHint="@color/Theme"
-                    android:textColor="@color/color004160"
-                    android:textStyle="bold"
-                    android:backgroundTint="@color/Theme"
-                    android:layout_gravity="center"
-                    android:inputType="phone"
-                    android:layout_marginVertical="20dp"
-                    android:maxEms="10"/>
-                <EditText
-                    android:layout_width="250dp"
-                    android:layout_height="wrap_content"
-                    android:hint="อีเมลล์"
-                    android:textColorHint="@color/Theme"
-                    android:textColor="@color/color004160"
-                    android:textStyle="bold"
-                    android:backgroundTint="@color/Theme"
-                    android:layout_gravity="center"
-                    android:inputType="text"
-                    android:layout_marginVertical="20dp"/>
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="20dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ชื่อผู้ใช้งาน"
+                        android:textColorHint="@color/White"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/White"
+                        android:layout_gravity="center"
+                        android:inputType="text"
+                        android:layout_marginTop="20dp"
+                        android:fontFamily="@font/mitr"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="รหัสผ่าน"
+                        android:textColorHint="@color/White"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/White"
+                        android:layout_gravity="center"
+                        android:inputType="textPassword"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/mitr"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ยืนยันรหัสผ่าน"
+                        android:textColorHint="@color/White"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/White"
+                        android:layout_gravity="center"
+                        android:inputType="textPassword"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/mitr"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="ชื่อ"
+                        android:textColorHint="@color/White"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/White"
+                        android:layout_gravity="center"
+                        android:inputType="text"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/mitr"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="นามสกุล"
+                        android:textColorHint="@color/White"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/White"
+                        android:layout_gravity="center"
+                        android:inputType="text"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/mitr"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="อายุ"
+                        android:textColorHint="@color/White"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/White"
+                        android:layout_gravity="center"
+                        android:inputType="numberSigned"
+                        android:layout_marginVertical="5dp"
+                        android:fontFamily="@font/mitr"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="เบอร์มือถือ"
+                        android:textColorHint="@color/White"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/White"
+                        android:layout_gravity="center"
+                        android:inputType="phone"
+                        android:layout_marginVertical="5dp"
+                        android:maxLength="10"
+                        android:fontFamily="@font/mitr"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="อีเมลล์"
+                        android:textColorHint="@color/White"
+                        android:textColor="@color/White"
+                        android:textStyle="bold"
+                        android:backgroundTint="@color/White"
+                        android:layout_gravity="center"
+                        android:inputType="textEmailAddress"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="20dp"
+                        android:fontFamily="@font/mitr"/>
+                </LinearLayout>
             </LinearLayout>
 
             <!-- btn register and btn back to log in page-->
@@ -144,10 +160,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="50dp">
+                android:layout_marginBottom="50dp"
+                android:layout_marginHorizontal="70dp">
                 <Button
                     android:id="@+id/btn_comfirm_register"
-                    android:layout_width="250dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="ลงทะเบียน"
                     android:textStyle="bold"
@@ -157,18 +174,20 @@
                     android:background="@drawable/btn_theme_solid"
                     android:layout_gravity="center"
                     android:layout_marginVertical="10dp"/>
+
                 <Button
                     android:id="@+id/btn_backToLogin"
-                    android:layout_width="250dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="10dp"
+                    android:background="#00FFFFFF"
+                    android:fontFamily="@font/mitr"
                     android:text="กลับไปยังหน้าเข้าสู่ระบบ"
-                    android:textStyle="bold"
+
                     android:textColor="@color/Theme"
                     android:textSize="20sp"
-                    android:fontFamily="@font/mitr"
-                    android:background="@drawable/btn_theme_line"
-                    android:layout_gravity="center"
-                    android:layout_marginVertical="10dp"/>
+                    android:textStyle="bold" />
             </LinearLayout>
 
 

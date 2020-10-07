@@ -18,7 +18,7 @@
                 android:id="@+id/layout-header"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/header_bp">
+                android:background="@drawable/header_glucose">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -45,7 +45,7 @@
                 </LinearLayout>
             </LinearLayout>
 
-            <!-- input manual blood pressure -->
+            <!-- input manual pulse rate -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -53,8 +53,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="ข้อมูลความดัน"
-                    android:textColor="@color/Theme"
+                    android:text="ข้อมูลระดับน้ำตาล"
+                    android:textColor="@color/color450000"
                     android:textStyle="bold"
                     android:textSize="25sp"
                     android:fontFamily="@font/mitr"
@@ -65,7 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/rectangle_bp"
+                    android:background="@drawable/rectangle_glucose"
                     android:orientation="vertical">
                     <!-- text and edit text layout -->
                     <!-- line 1 : sys -->
@@ -73,14 +73,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="40dp"
-                        android:layout_marginTop="30dp"
+                        android:layout_marginVertical="30dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:text="SYS"
+                            android:layout_weight="2"
+                            android:text="ระดับน้ำตาล"
                             android:textColor="@color/White"
                             android:textSize="22sp"
                             android:textStyle="bold" />
@@ -98,57 +98,16 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="match_parent"
                             android:layout_gravity="end"
-                            android:layout_weight="3"
-                            android:text="mmHg"
+                            android:layout_weight="2"
+                            android:text="mg/dl"
                             android:textColor="@color/White"
                             android:textSize="22sp"
                             android:textStyle="bold"
-                            android:gravity="end"
-                            />
-
+                            android:gravity="center"/>
                     </LinearLayout>
-                    <!-- line 2 : DIA -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="40dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginBottom="30dp"
-                        android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:text="DIA"
-                            android:textColor="@color/White"
-                            android:textSize="22sp"
-                            android:textStyle="bold" />
-
-                        <EditText
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:textColor="@color/White"
-                            android:textColorHint="@color/White"
-                            android:textColorLink="@color/White"
-                            android:textStyle="bold"
-                            android:inputType="numberSigned"
-                            android:maxLength="3"/>
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="end"
-                            android:layout_weight="3"
-                            android:text="mmHg"
-                            android:textColor="@color/White"
-                            android:textSize="22sp"
-                            android:textStyle="bold"
-                            android:gravity="end"/>
-                    </LinearLayout>
                 </LinearLayout>
 
                 <!-- update blood pressure data layout -->
@@ -163,7 +122,7 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/btn_update_bp"
+                        android:background="@drawable/btn_update_glucose"
                         android:text="บันทึกข้อมูล"
                         android:textSize="25sp"
                         android:textStyle="bold"

@@ -80,7 +80,7 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="3"
-                            android:text="Pulse Rate"
+                            android:text="Heart Rate"
                             android:textColor="@color/White"
                             android:textSize="22sp"
                             android:textStyle="bold" />
@@ -92,13 +92,15 @@
                             android:textColor="@color/White"
                             android:textColorHint="@color/White"
                             android:textColorLink="@color/White"
-                            android:textStyle="bold" />
+                            android:textStyle="bold"
+                            android:inputType="numberSigned"
+                            android:maxLength="3"/>
 
                         <TextView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_gravity="end"
-                            android:layout_weight="3"
+                            android:layout_weight="2"
                             android:text="bpm"
                             android:textColor="@color/White"
                             android:textSize="22sp"

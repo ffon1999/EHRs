@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- logo image -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_gravity="end">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="55.84dp"
+                android:src="@drawable/logo_white"/>
+        </LinearLayout>
+
+        <!-- topic profile layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ข้อมูลส่วนตัว"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/White"
+                android:fontFamily="@font/mitr"
+                android:gravity="center_horizontal"/>
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_account_circle"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <!-- user form layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_white_solid"
+            android:layout_marginHorizontal="60dp"
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ชื่อผู้ใช้งาน"
+                android:textSize="18dp"
+                android:textColor="@color/Theme"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chittapon"
+                android:textSize="22dp"
+                android:textColor="@color/color014B6F"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ชื่อ"
+                android:textSize="18dp"
+                android:textColor="@color/Theme"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ชิตพล"
+                android:textSize="22dp"
+                android:textColor="@color/color014B6F"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="นามสุกล"
+                android:textSize="18dp"
+                android:textColor="@color/Theme"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ลี้ชัยพรกุล"
+                android:textSize="22dp"
+                android:textColor="@color/color014B6F"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="อายุ"
+                android:textSize="18dp"
+                android:textColor="@color/Theme"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="26"
+                android:textSize="22dp"
+                android:textColor="@color/color014B6F"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_medium"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="เบอร์มือถือ"
+                android:textSize="18dp"
+                android:textColor="@color/Theme"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="09823456789"
+                android:textSize="22dp"
+                android:textColor="@color/color014B6F"
+                android:textStyle="bold"
+                android:fontFamily="@font/quicksand_medium"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="อีเมลล์"
+                android:textSize="18dp"
+                android:textColor="@color/Theme"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chitta.pon@gmail.com"
+                android:textSize="22dp"
+                android:textColor="@color/color014B6F"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="40dp">
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ออกจากระบบ"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="@color/White"
+                android:fontFamily="@font/mitr"
+                android:background="@drawable/btn_theme_solid"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

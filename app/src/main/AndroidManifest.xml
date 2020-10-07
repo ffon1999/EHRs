@@ -25,6 +25,15 @@
         <activity android:name=".HistoryWeight"/>
         <activity android:name=".HistoryHeight"/>
         <activity android:name=".HistoryGlucose"/>
+        <activity android:name=".AddBP"/>
+        <activity android:name=".AddPR"/>
+        <activity android:name=".AddTemp"/>
+        <activity android:name=".AddWeight"/>
+        <activity android:name=".AddHeight"/>
+        <activity android:name=".AddGlucose"/>
+        <activity android:name=".BT_BP"/>
+        <activity android:name=".BT_PR"/>
+        <activity android:name=".Profile_Account"/>
 
         <meta-data
             android:name="preloaded_fonts"

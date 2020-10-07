@@ -7,6 +7,7 @@
     <color name="colorF0F0F0">#F0F0F0</color>
     <color name="LightGrey">#B5B5B5</color>
     <color name="Grey">#828282</color>
+    <color name="colorABB2B9">#ABB2B9</color>
     <color name="Theme">#03ADB8</color>
 
     <!-- blue (blood pressure) set -->
@@ -55,6 +56,8 @@
     <color name="color19252B">#19252B</color>
 
     <!-- red (glucose) set -->
+    <color name="colorD98880">#D98880</color>
+    <color name="colorCB4335">#CB4335</color>
     <color name="colorA10000">#A10000</color>
     <color name="color730000">#730000</color>
     <color name="color450000">#450000</color>

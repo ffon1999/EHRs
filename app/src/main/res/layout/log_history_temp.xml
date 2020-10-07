@@ -18,7 +18,7 @@
                 android:id="@+id/layout-header"
                 android:layout_width="match_parent"
                 android:layout_height="130dp"
-                android:background="@drawable/header_bp">
+                android:background="@drawable/header_temp">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -35,56 +35,73 @@
                         android:layout_marginHorizontal="30dp"
                         android:fontFamily="@font/mitr"
                         android:text="ประวัติ"
-                        android:textColor="@color/color014B6F"
+                        android:textColor="@color/White"
                         android:textSize="22sp"
                         android:textStyle="bold"
                         android:layout_gravity="center"/>
                 </LinearLayout>
             </LinearLayout>
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ประวัติการบันทึกข้อมูล"
+                android:textSize="22sp"
+                android:textColor="@color/color063E3A"
+                android:textStyle="bold"
+                android:fontFamily="@font/mitr"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <!-- layout show history graph -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="20dp">
+
+            </LinearLayout>
+
+
             <!-- header log -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:weightSum="3">
+                android:layout_marginHorizontal="20dp">
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
                     android:layout_height="wrap_content"
                     android:text="วัน/เดือน/ปี"
                     android:textColor="@color/Grey"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/mitr"
-                    android:layout_marginHorizontal="50dp"/>
+                    android:fontFamily="@font/mitr" />
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
                     android:layout_height="wrap_content"
-                    android:text="SYS"
+                    android:text="อุณหภูมิ"
                     android:textColor="@color/Grey"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/mitr"
-                    android:layout_marginHorizontal="30dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DIA"
-                    android:textColor="@color/Grey"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:fontFamily="@font/mitr"
-                    android:layout_marginHorizontal="30dp"/>
+                    android:gravity="center"/>
             </LinearLayout>
 
-            <!-- log history blood pressure-->
+
+            <!-- log history glucose -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
 
-                <ListView
+                <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="200dp"
+                    />
+
+
 
 
             </LinearLayout>
