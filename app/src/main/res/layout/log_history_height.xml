@@ -55,6 +55,7 @@
 
             <!-- layout show history graph -->
             <LinearLayout
+                android:id="@+id/graph_height"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:layout_margin="20dp">
@@ -97,6 +98,7 @@
                 android:layout_margin="20dp">
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/history_value_height"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     />
