@@ -2,6 +2,8 @@ package com.example.ehrs
 
 import android.content.Intent
 import android.os.Bundle
+import android.transition.AutoTransition
+import android.transition.TransitionManager
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
@@ -73,60 +75,60 @@ class Home : AppCompatActivity() {
         //press btn to expandable cardview
         cardview_bp.setOnClickListener(View.OnClickListener {
             if (expandableViewBP.getVisibility() == View.GONE) {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvBP, AutoTransition())
                 expandableViewBP.setVisibility(View.VISIBLE)
             } else {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvBP, AutoTransition())
                 expandableViewBP.setVisibility(View.GONE)
             }
         })
 
         cardview_pr.setOnClickListener(View.OnClickListener {
             if (expandableViewPR.getVisibility() == View.GONE) {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvPR, AutoTransition())
                 expandableViewPR.setVisibility(View.VISIBLE)
             } else {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvPR, AutoTransition())
                 expandableViewPR.setVisibility(View.GONE)
             }
         })
 
         cardview_temp.setOnClickListener(View.OnClickListener {
             if (expandableViewTemp.getVisibility() == View.GONE) {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvTemp, AutoTransition())
                 expandableViewTemp.setVisibility(View.VISIBLE)
             } else {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvTemp, AutoTransition())
                 expandableViewTemp.setVisibility(View.GONE)
             }
         })
 
         cardview_weight.setOnClickListener(View.OnClickListener {
             if (expandableViewWeight.getVisibility() == View.GONE) {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvWeight, AutoTransition())
                 expandableViewWeight.setVisibility(View.VISIBLE)
             } else {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvWeight, AutoTransition())
                 expandableViewWeight.setVisibility(View.GONE)
             }
         })
 
         cardview_height.setOnClickListener(View.OnClickListener {
             if (expandableViewHeight.getVisibility() == View.GONE) {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvHeight, AutoTransition())
                 expandableViewHeight.setVisibility(View.VISIBLE)
             } else {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvHeight, AutoTransition())
                 expandableViewHeight.setVisibility(View.GONE)
             }
         })
 
         cardview_glucose.setOnClickListener(View.OnClickListener {
             if (expandableViewGlucose.getVisibility() == View.GONE) {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvGlucose, AutoTransition())
                 expandableViewGlucose.setVisibility(View.VISIBLE)
             } else {
-                //TransitionManager.beginDelayedTransition(cvBtn,new AutoTransition());
+                TransitionManager.beginDelayedTransition(cvGlucose, AutoTransition())
                 expandableViewGlucose.setVisibility(View.GONE)
             }
         })
