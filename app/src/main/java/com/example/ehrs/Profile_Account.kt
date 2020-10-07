@@ -18,6 +18,14 @@ class Profile_Account : AppCompatActivity() {
         setContentView(R.layout.profile_user)
 
         val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
+        val loginapp =sharedPreferences.getBoolean("Login",false)
+
+            if (loginapp==false){
+                startActivity(
+                    Intent(this,Login::class.java)
+                )
+            }
+
 
         val username =sharedPreferences.getString("Username","...")
         val firstname =sharedPreferences.getString("Firstname","...")
@@ -36,6 +44,21 @@ class Profile_Account : AppCompatActivity() {
         LogOut = findViewById(R.id.btn_logout)
 
         btn_logout.setOnClickListener(View.OnClickListener {
+
+
+            val editor = sharedPreferences.edit()
+            //***//
+            editor.putString("Username", "")
+            //editor.putString("Password", password)
+            editor.putBoolean("Login", false )
+            editor.putString("Firstname", "")
+            editor.putString("Surname", "")
+            editor.putString("Phone", "")
+            editor.putString("Email", "")
+            //**---**
+            editor.apply()
+
+
             startActivity(
                 Intent(this,Login::class.java)
             )
