@@ -1,5 +1,6 @@
 package com.example.ehrs
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -15,6 +16,22 @@ class Profile_Account : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.profile_user)
+
+        val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
+
+        val username =sharedPreferences.getString("Username","...")
+        val firstname =sharedPreferences.getString("Firstname","...")
+        val surname =sharedPreferences.getString("Surname","...")
+        val phone =sharedPreferences.getString("Phone","...")
+        val email =sharedPreferences.getString("Email","...")
+
+        /* Set data to text  */
+        username_profile.text = "$username"
+        firstname_profile.text = "$firstname"
+        surname_profile.text = "$surname"
+        phone_profile.text = "$phone"
+        email_profile.text = "$email"
+
 
         LogOut = findViewById(R.id.btn_logout)
 

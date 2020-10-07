@@ -50,14 +50,14 @@ class Home : AppCompatActivity() {
 
         val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
 
-        val username =sharedPreferences.getString("Username","0")
-        val numberBPHeight =sharedPreferences.getString("NumberBPHeight","0")
-        val numberBPLow =sharedPreferences.getString("NumberBPLow","0")
-        val numberPR =sharedPreferences.getString("NumberPR","0")
-        val numberTemp =sharedPreferences.getString("NumberTemp","0")
-        val numberWeight =sharedPreferences.getString("NumberWeight","0")
-        val numberHeight =sharedPreferences.getString("NumberHeight","0")
-        val numberGlucose =sharedPreferences.getString("NumberGlucose","0")
+        val username =sharedPreferences.getString("Username","Username")
+        val numberBPHeight =sharedPreferences.getInt("NumberBPHeight",0)
+        val numberBPLow =sharedPreferences.getInt("NumberBPLow",0)
+        val numberPR =sharedPreferences.getInt("NumberPR",0)
+        val numberTemp =sharedPreferences.getFloat("NumberTemp",0f)
+        val numberWeight =sharedPreferences.getFloat("NumberWeight",0f)
+        val numberHeight =sharedPreferences.getFloat("NumberHeight",0f)
+        val numberGlucose =sharedPreferences.getInt("NumberGlucose",0)
 
         /* Set data to text  */
         username_home.text = "$username"

@@ -67,6 +67,7 @@ class Login : AppCompatActivity() {
                 }, Response.ErrorListener{
                     // Error in request
                     Log.e("E","Volley error $it")
+                    /*  สร้างฟังค์ชั่น แจ้งว่า time out  และ ชื่อผู้ใช้และรหัสผ่านไม่ถูกต้อง */
                     //Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
 
                 })
