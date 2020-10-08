@@ -24,6 +24,12 @@ class Login : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
         val loginBtn = findViewById<Button>(R.id.btn_login)
         val registBtn = findViewById<Button>(R.id.btn_register)
+        val loginstatus =sharedPreferences.getBoolean("Login",false)
+
+        if(loginstatus){
+            nexttohome()
+        }
+
 
         btn_login.setOnClickListener {
             val editor = sharedPreferences.edit()

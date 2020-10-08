@@ -36,7 +36,7 @@ class HistoryBP :AppCompatActivity() {
                 for(i in 0 until it.length()){
                     val jsonObj = it.getJSONObject(i)
 
-                    val date = jsonObj.getString("date_add")
+                    val date = jsonObj.getString("date_add").trim()
                     val time = jsonObj.getString("time_add")
                     val systolic = jsonObj.getString("systolic_blood_pressure_patient")
                     val diastolic = jsonObj.getString("diastolic_blood_pressure_patient")
