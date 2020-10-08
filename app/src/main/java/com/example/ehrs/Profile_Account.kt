@@ -55,6 +55,10 @@ class Profile_Account : AppCompatActivity() {
             editor.putString("Surname", "")
             editor.putString("Phone", "")
             editor.putString("Email", "")
+
+            /**/
+            editor.clear()
+
             //**---**
             editor.apply()
 

@@ -107,7 +107,5 @@ class AddBP   : AppCompatActivity() {
             que.add(request)
 
         }
-
     }
-
 }
