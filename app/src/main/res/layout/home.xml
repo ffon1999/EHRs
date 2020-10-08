@@ -505,6 +505,17 @@
                                     android:textColor="@color/color063E3A"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
+                                <Button
+                                    android:id="@+id/btn_addBT_Temp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginVertical="5dp"
+                                    android:background="@drawable/btn_white_solid"
+                                    android:fontFamily="@font/mitr"
+                                    android:text="ซิงค์กับบลูทูธ"
+                                    android:textColor="@color/color063E3A"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -629,6 +640,7 @@
                                     android:textColor="@color/color1E0E3A"
                                     android:textSize="18sp"
                                     android:textStyle="bold" />
+
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>

@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.bp_bt.*
 
 class BT_BP : AppCompatActivity() {
     private var button: Button? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.bp_bt)

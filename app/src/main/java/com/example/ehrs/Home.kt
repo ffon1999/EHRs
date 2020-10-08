@@ -42,6 +42,10 @@ class Home : AppCompatActivity() {
     var addHeight : Button? = null
     var addGlucose : Button? = null
 
+    var addBT_BP : Button? = null
+    var addBT_PR : Button? = null
+    var addBT_Temp : Button? = null
+
     var BtnAccount : Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,6 +93,11 @@ class Home : AppCompatActivity() {
         HistoryWeight = findViewById(R.id.btn_historyWeight)
         HistoryHeight = findViewById(R.id.btn_historyHeight)
         HistoryGlucose = findViewById(R.id.btn_historyGlucose)
+
+
+        addBT_BP = findViewById(R.id.btn_addBT_BP)
+        addBT_PR = findViewById(R.id.btn_addBT_PR)
+        addBT_Temp = findViewById(R.id.btn_addBT_Temp)
 
         BtnAccount = findViewById(R.id.btn_account)
 
@@ -227,7 +236,7 @@ class Home : AppCompatActivity() {
             )
         })
 
-        //press btn to synce data with bluetooth
+        //press btn to sync data with bluetooth
         btn_addBT_BP.setOnClickListener(View.OnClickListener {
             startActivity(
                 Intent(this@Home, BT_BP::class.java)
@@ -235,9 +244,15 @@ class Home : AppCompatActivity() {
         })
         btn_addBT_PR.setOnClickListener(View.OnClickListener {
             startActivity(
-                Intent(this@Home, com.example.ehrs.BT_PR::class.java)
+                Intent(this@Home, BT_PR::class.java)
             )
         })
+        btn_addBT_Temp.setOnClickListener(View.OnClickListener {
+            startActivity(
+                Intent(this@Home, BT_Temp::class.java)
+            )
+        })
+
 
         //press btn goto profile page
         btn_account.setOnClickListener(View.OnClickListener {

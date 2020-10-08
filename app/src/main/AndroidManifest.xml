@@ -38,6 +38,7 @@
         <activity android:name=".AddGlucose"/>
         <activity android:name=".BT_BP"/>
         <activity android:name=".BT_PR"/>
+        <activity android:name=".BT_Temp"/>
         <activity android:name=".Profile_Account"/>
 
         <meta-data
