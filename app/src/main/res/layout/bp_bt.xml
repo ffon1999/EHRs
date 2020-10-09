@@ -82,6 +82,138 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="30dp">
+                <Button
+                    android:id="@+id/b1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_update_bp"
+                    android:text="read last info"
+                    android:textColor="@color/White"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/mitr"
+                    android:padding="20dp"/>
+                <Button
+                    android:id="@+id/b2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_update_bp"
+                    android:text="read history"
+                    android:textColor="@color/White"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/mitr"
+                    android:padding="20dp"/>
+                <Button
+                    android:id="@+id/b3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_update_bp"
+                    android:text="clear history"
+                    android:textColor="@color/White"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/mitr"
+                    android:padding="20dp"/>
+                <Button
+                    android:id="@+id/b4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_update_bp"
+                    android:text="บันทึก"
+                    android:textColor="@color/White"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/mitr"
+                    android:padding="20dp"/>
+                <Button
+                    android:id="@+id/b5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_update_bp"
+                    android:text="disconnect"
+                    android:textColor="@color/White"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:fontFamily="@font/mitr"
+                    android:padding="20dp"/>
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="30dp"
+                    android:fontFamily="@font/mitr"
+                    android:text="เพิ่มข้อมูล"
+                    android:textColor="@color/Primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="30dp"
+                    android:fontFamily="@font/mitr"
+                    android:text="เพิ่มข้อมูล"
+                    android:textColor="@color/Primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/t4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="30dp"
+                    android:fontFamily="@font/mitr"
+                    android:text="เพิ่มข้อมูล"
+                    android:textColor="@color/Primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/t5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="30dp"
+                    android:fontFamily="@font/mitr"
+                    android:text="เพิ่มข้อมูล"
+                    android:textColor="@color/Primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+                <TextView
+                android:id="@+id/t6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="30dp"
+                android:fontFamily="@font/mitr"
+                android:text="เพิ่มข้อมูล"
+                android:textColor="@color/Primary"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/t7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="30dp"
+                    android:fontFamily="@font/mitr"
+                    android:text="เพิ่มข้อมูล"
+                    android:textColor="@color/Primary"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+
+
+            </LinearLayout>
+
 
 
 

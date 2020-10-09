@@ -253,9 +253,6 @@ class BT_Temp  : AppCompatActivity(), ThermoProtocol.OnDataResponseListener,
 
     }
 
-
-
-
     fun openDialog() {
         val infoTempdialog = HowToSyncTemp()
         infoTempdialog.show(supportFragmentManager, "how to sync temperature dialog")
