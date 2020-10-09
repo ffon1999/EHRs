@@ -51,25 +51,21 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
         info_bt_bp.setOnClickListener(View.OnClickListener { openDialog() })
 
 
-        /* get button read data */
-        b1.setOnClickListener {
-            Global.bpmProtocol.readLastData()
-        }
-
         b2.setOnClickListener {
             Global.bpmProtocol.readHistorysOrCurrDataAndSyncTiming()
         }
 
+        /*
         b3.setOnClickListener {
             Global.bpmProtocol.clearAllHistorys()
         }
+         */
 
         b4.setOnClickListener {
             /*
             super.onDestroy()
             if (Global.bpmProtocol.isConnected) Global.bpmProtocol.disconnect()
             Global.bpmProtocol.stopScan()
-
              */
             if(datasys != null || datadia != null ||datahr!= null){
 
@@ -82,16 +78,10 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
                         it3
                     )
                 } } }
-
             }
             else{
                 Toast.makeText(applicationContext, "No data", Toast.LENGTH_SHORT).show()
             }
-
-        }
-
-        b5.setOnClickListener {
-            Global.bpmProtocol.disconnectBPM()
         }
 
 
