@@ -99,6 +99,9 @@ class Home : AppCompatActivity() {
 
         BtnAccount = findViewById(R.id.btn_account)
 
+        val autoTransition = AutoTransition()
+        autoTransition.duration = 50000
+
 
         //press btn to expandable cardview
         cardview_bp.setOnClickListener(View.OnClickListener {
@@ -106,7 +109,7 @@ class Home : AppCompatActivity() {
                 TransitionManager.beginDelayedTransition(cvBP, AutoTransition())
                 expandableViewBP.setVisibility(View.VISIBLE)
             } else {
-                TransitionManager.beginDelayedTransition(cvBP, AutoTransition())
+                TransitionManager.beginDelayedTransition(expendableViewBP, AutoTransition())
                 expandableViewBP.setVisibility(View.GONE)
             }
         })
@@ -116,7 +119,7 @@ class Home : AppCompatActivity() {
                 TransitionManager.beginDelayedTransition(cvPR, AutoTransition())
                 expandableViewPR.setVisibility(View.VISIBLE)
             } else {
-                TransitionManager.beginDelayedTransition(cvPR, AutoTransition())
+                TransitionManager.beginDelayedTransition(expendableViewPR, AutoTransition())
                 expandableViewPR.setVisibility(View.GONE)
             }
         })
@@ -126,7 +129,7 @@ class Home : AppCompatActivity() {
                 TransitionManager.beginDelayedTransition(cvTemp, AutoTransition())
                 expandableViewTemp.setVisibility(View.VISIBLE)
             } else {
-                TransitionManager.beginDelayedTransition(cvTemp, AutoTransition())
+                TransitionManager.beginDelayedTransition(expendableViewTemp, AutoTransition())
                 expandableViewTemp.setVisibility(View.GONE)
             }
         })
@@ -136,7 +139,7 @@ class Home : AppCompatActivity() {
                 TransitionManager.beginDelayedTransition(cvWeight, AutoTransition())
                 expandableViewWeight.setVisibility(View.VISIBLE)
             } else {
-                TransitionManager.beginDelayedTransition(cvWeight, AutoTransition())
+                TransitionManager.beginDelayedTransition(expandableViewWeight, AutoTransition())
                 expandableViewWeight.setVisibility(View.GONE)
             }
         })
@@ -146,7 +149,7 @@ class Home : AppCompatActivity() {
                 TransitionManager.beginDelayedTransition(cvHeight, AutoTransition())
                 expandableViewHeight.setVisibility(View.VISIBLE)
             } else {
-                TransitionManager.beginDelayedTransition(cvHeight, AutoTransition())
+                TransitionManager.beginDelayedTransition(expendableViewHeight, AutoTransition())
                 expandableViewHeight.setVisibility(View.GONE)
             }
         })
@@ -156,7 +159,7 @@ class Home : AppCompatActivity() {
                 TransitionManager.beginDelayedTransition(cvGlucose, AutoTransition())
                 expandableViewGlucose.setVisibility(View.VISIBLE)
             } else {
-                TransitionManager.beginDelayedTransition(cvGlucose, AutoTransition())
+                TransitionManager.beginDelayedTransition(expendableViewGlucose, AutoTransition())
                 expandableViewGlucose.setVisibility(View.GONE)
             }
         })
