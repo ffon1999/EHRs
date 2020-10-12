@@ -87,6 +87,11 @@ class Login : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        // super.onBackPressed();
+        // Not calling **super**, disables back button in current screen.
+    }
+
     fun nexttohome(){
         val intent = Intent(this,Home::class.java)
         startActivity(intent)
