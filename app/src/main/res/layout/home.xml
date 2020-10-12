@@ -71,6 +71,7 @@
                     android:fontFamily="@font/mitr"/>
 
                 <Button
+                    android:id="@+id/buttonrefresh"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@drawable/ic_refresh"
@@ -125,7 +126,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
                     android:clickable="true"
-                    app:cardBackgroundColor="@color/color00ADFF"
+                    app:cardBackgroundColor="@color/color0082BF"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="5dp">
 

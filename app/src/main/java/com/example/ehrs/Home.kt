@@ -5,12 +5,19 @@ import android.content.Intent
 import android.os.Bundle
 import android.transition.AutoTransition
 import android.transition.TransitionManager
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.Volley
 import kotlinx.android.synthetic.main.home.*
+import kotlinx.android.synthetic.main.login.*
+import org.json.JSONObject
 
 class Home : AppCompatActivity() {
 
@@ -262,11 +269,287 @@ class Home : AppCompatActivity() {
             )
         })
 
+        buttonrefresh.setOnClickListener {
+            refreshall()
+        }
+
     }
 
     override fun onBackPressed() {
         // super.onBackPressed();
         // Not calling **super**, disables back button in current screen.
+    }
+
+    fun refreshall(){
+
+        refreshBP()
+        refreshHR()
+        refreahTemp()
+        refreahWeight()
+        refreahHeight()
+        refreahGlucose()
+
+    }
+    fun refreshBP(){
+        val url = "https://ehr-system-project.herokuapp.com/api/examination/refresh/BP"
+        val jsonobjusername = JSONObject()
+        val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        val username =sharedPreferences.getString("Username","Username")
+        jsonobjusername.put("user_name_patient",username)
+
+        val que = Volley.newRequestQueue(this)
+
+        val request = JsonObjectRequest(
+            Request.Method.POST,url,jsonobjusername,
+            Response.Listener { response ->
+                // Process the json
+                try {
+                    val obj = response
+                    //Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
+                    val NumberBPHeight = obj.getInt("systolic_blood_pressure_patient")
+                    val NumberBPLow = obj.getInt("diastolic_blood_pressure_patient")
+                    //val password = obj.getString("password_patient")
+
+                    //***//
+                    editor.putString("Username", username)
+                    //editor.putString("Password", password)
+                    editor.putInt("NumberBPHeight", NumberBPHeight)
+                    editor.putInt("NumberBPLow", NumberBPLow)
+
+                    //**---**
+                    editor.apply()
+                    val numberBPHeight =sharedPreferences.getInt("NumberBPHeight",0)
+                    val numberBPLow =sharedPreferences.getInt("NumberBPLow",0)
+                    num1_bp.text = "$numberBPHeight"
+                    num2_bp.text = "$numberBPLow"
+                    Log.e("e","0000000000000000 ")
+                    //val nameU =sharedPreferences.getString("NAME","")
+                }catch (e:Exception){
+                    Log.i("i","Exception: $e")
+                }
+            }, Response.ErrorListener{
+                // Error in request
+                Log.e("E","Volley error $it")
+                /*  สร้างฟังค์ชั่น แจ้งว่า time out  และ ชื่อ */
+                //Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
+
+            })
+        que.add(request)
+
+    }
+    fun refreshHR(){
+        val url = "https://ehr-system-project.herokuapp.com/api/examination/refresh/heartrate"
+        val jsonobjusername = JSONObject()
+        val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        val username =sharedPreferences.getString("Username","Username")
+        jsonobjusername.put("user_name_patient",username)
+
+        val que = Volley.newRequestQueue(this)
+
+        val request = JsonObjectRequest(
+            Request.Method.POST,url,jsonobjusername,
+            Response.Listener { response ->
+                // Process the json
+                try {
+                    val obj = response
+                    //Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
+                    val NumberPR = obj.getInt("heart_rate_patient")
+                    //val password = obj.getString("password_patient")
+
+                    //***//
+                    editor.putString("Username", username)
+                    //editor.putString("Password", password)
+                    editor.putInt("NumberPR", NumberPR)
+
+                    //**---**
+                    editor.apply()
+                    val numberPR =sharedPreferences.getInt("NumberPR",0)
+                    num_pr.text = "$numberPR"
+                    Log.e("e","111111111 ")
+                    //val nameU =sharedPreferences.getString("NAME","")
+                }catch (e:Exception){
+                    Log.i("i","Exception: $e")
+                }
+            }, Response.ErrorListener{
+                // Error in request
+                Log.e("E","Volley error $it")
+                /*  สร้างฟังค์ชั่น แจ้งว่า time out  และ ชื่อ */
+                //Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
+
+            })
+        que.add(request)
+
+    }
+    fun refreahTemp(){
+        val url = "https://ehr-system-project.herokuapp.com/api/examination/refresh/temp"
+        val jsonobjusername = JSONObject()
+        val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        val username =sharedPreferences.getString("Username","Username")
+        jsonobjusername.put("user_name_patient",username)
+
+        val que = Volley.newRequestQueue(this)
+
+        val request = JsonObjectRequest(
+            Request.Method.POST,url,jsonobjusername,
+            Response.Listener { response ->
+                // Process the json
+                try {
+                    val obj = response
+                    //Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
+                    val NumberTemp = obj.getString("body_temperature_patient").toFloat()
+                    //val password = obj.getString("password_patient")
+
+                    //***//
+                    editor.putFloat("NumberTemp", NumberTemp)
+
+                    //**---**
+                    editor.apply()
+                    val numberTemp =sharedPreferences.getFloat("NumberTemp",0f)
+                    num_temp.text = "$numberTemp"
+                    Log.e("e","2222222222 ")
+                    //val nameU =sharedPreferences.getString("NAME","")
+                }catch (e:Exception){
+                    Log.i("i","Exception: $e")
+                }
+            }, Response.ErrorListener{
+                // Error in request
+                Log.e("E","Volley error $it")
+                /*  สร้างฟังค์ชั่น แจ้งว่า time out  และ ชื่อ */
+                //Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
+
+            })
+        que.add(request)
+    }
+    fun refreahWeight(){
+        val url = "https://ehr-system-project.herokuapp.com/api/examination/refresh/weight"
+        val jsonobjusername = JSONObject()
+        val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        val username =sharedPreferences.getString("Username","Username")
+        jsonobjusername.put("user_name_patient",username)
+
+        val que = Volley.newRequestQueue(this)
+
+        val request = JsonObjectRequest(
+            Request.Method.POST,url,jsonobjusername,
+            Response.Listener { response ->
+                // Process the json
+                try {
+                    val obj = response
+                    //Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
+                    val NumberWeight = obj.getString("weight_patient").toFloat()
+                    //val password = obj.getString("password_patient")
+
+                    //***//
+                    editor.putFloat("NumberWeight", NumberWeight)
+
+                    //**---**
+                    editor.apply()
+                    val numberWeight =sharedPreferences.getFloat("NumberWeight",0f)
+                    num_weight.text = "$numberWeight"
+                    Log.e("e","333333333333 ")
+
+                }catch (e:Exception){
+                    Log.i("i","Exception: $e")
+                }
+            }, Response.ErrorListener{
+                // Error in request
+                Log.e("E","Volley error $it")
+                /*  สร้างฟังค์ชั่น แจ้งว่า time out  และ ชื่อ */
+                //Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
+
+            })
+        que.add(request)
+    }
+    fun refreahHeight(){
+        val url = "https://ehr-system-project.herokuapp.com/api/examination/refresh/height"
+        val jsonobjusername = JSONObject()
+        val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        val username =sharedPreferences.getString("Username","Username")
+        jsonobjusername.put("user_name_patient",username)
+
+        val que = Volley.newRequestQueue(this)
+
+        val request = JsonObjectRequest(
+            Request.Method.POST,url,jsonobjusername,
+            Response.Listener { response ->
+                // Process the json
+                try {
+                    val obj = response
+                    //Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
+                    val NumberHeight = obj.getString("height_patient").toFloat()
+                    //val password = obj.getString("password_patient")
+
+                    //***//
+                    editor.putFloat("NumberHeight", NumberHeight)
+
+                    //**---**
+                    editor.apply()
+                    val numberHeight =sharedPreferences.getFloat("NumberHeight",0f)
+                    num_height.text = "$numberHeight"
+                    Log.e("e","444444444444444 ")
+                }catch (e:Exception){
+                    Log.i("i","Exception: $e")
+                }
+            }, Response.ErrorListener{
+                // Error in request
+                Log.e("E","Volley error $it")
+                /*  สร้างฟังค์ชั่น แจ้งว่า time out  และ ชื่อ */
+                //Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
+
+            })
+        que.add(request)
+    }
+    fun refreahGlucose(){
+        val url = "https://ehr-system-project.herokuapp.com/api/examination/refresh/glucose"
+        val jsonobjusername = JSONObject()
+        val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        val username =sharedPreferences.getString("Username","Username")
+        jsonobjusername.put("user_name_patient",username)
+
+        val que = Volley.newRequestQueue(this)
+
+        val request = JsonObjectRequest(
+            Request.Method.POST,url,jsonobjusername,
+            Response.Listener { response ->
+                // Process the json
+                try {
+                    val obj = response
+                    //Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
+                    val NumberGlucose = obj.getInt("glucose_patient")
+                    //val password = obj.getString("password_patient")
+
+                    //***//
+                    editor.putInt("NumberGlucose", NumberGlucose)
+
+                    //**---**
+                    editor.apply()
+                    val numberGlucose =sharedPreferences.getInt("NumberGlucose",0)
+                    num_glucose.text = "$numberGlucose"
+                    Log.e("e","555555555555")
+                }catch (e:Exception){
+                    Log.i("i","Exception: $e")
+                }
+            }, Response.ErrorListener{
+                // Error in request
+                Log.e("E","Volley error $it")
+                /*  สร้างฟังค์ชั่น แจ้งว่า time out  และ ชื่อ */
+                //Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
+
+            })
+        que.add(request)
+
     }
 
 }
