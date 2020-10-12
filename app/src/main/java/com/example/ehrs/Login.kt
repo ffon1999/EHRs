@@ -30,7 +30,6 @@ class Login : AppCompatActivity() {
             nexttohome()
         }
 
-
         btn_login.setOnClickListener {
             val editor = sharedPreferences.edit()
 
