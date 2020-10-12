@@ -43,7 +43,6 @@ class Home : AppCompatActivity() {
     var addGlucose : Button? = null
 
     var addBT_BP : Button? = null
-    var addBT_PR : Button? = null
     var addBT_Temp : Button? = null
 
     var BtnAccount : Button? = null
@@ -96,7 +95,6 @@ class Home : AppCompatActivity() {
 
 
         addBT_BP = findViewById(R.id.btn_addBT_BP)
-        addBT_PR = findViewById(R.id.btn_addBT_PR)
         addBT_Temp = findViewById(R.id.btn_addBT_Temp)
 
         BtnAccount = findViewById(R.id.btn_account)
@@ -244,7 +242,7 @@ class Home : AppCompatActivity() {
         })
         btn_addBT_PR.setOnClickListener(View.OnClickListener {
             startActivity(
-                Intent(this@Home, BT_PR::class.java)
+                Intent(this@Home, BT_BP::class.java)
             )
         })
         btn_addBT_Temp.setOnClickListener(View.OnClickListener {

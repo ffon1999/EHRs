@@ -34,7 +34,7 @@
                         android:layout_height="match_parent"
                         android:layout_marginHorizontal="30dp"
                         android:fontFamily="@font/mitr"
-                        android:text="ประวัติ"
+                        android:text="ประวัติข้อมูลอุณหภูมิ"
                         android:textColor="@color/White"
                         android:textSize="22sp"
                         android:textStyle="bold"

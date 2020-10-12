@@ -81,7 +81,7 @@
                     android:layout_marginVertical="30dp"
                     android:layout_marginHorizontal="40dp"/>
 
-                <!--Show state for HeartRate fuction-->
+                <!--Show state for Temperature fuction-->
                 <LinearLayout
                     android:id="@+id/expandableViewBTTemp"
                     android:layout_width="match_parent"
@@ -186,19 +186,21 @@
                             android:textStyle="bold"
                             android:textSize="20sp"
                             android:fontFamily="@font/mitr"/>
+                        <Button
+                            android:id="@+id/update_bt_temp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_marginVertical="10dp"
+                            android:background="@drawable/btn_update_temp"
+                            android:text="บันทึกข้อมูล"
+                            android:textStyle="bold"
+                            android:textSize="22sp"
+                            android:textColor="@color/White"
+                            android:fontFamily="@font/mitr"
+                            android:padding="10dp"/>
                     </LinearLayout>
-                    <Button
-                        android:id="@+id/update_bt_temp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="10dp"
-                        android:layout_marginVertical="10dp"
-                        android:background="@drawable/btn_update_temp"
-                        android:text="บันทึกข้อมูล"
-                        android:textStyle="bold"
-                        android:textSize="22sp"
-                        android:textColor="@color/White"
-                        android:fontFamily="@font/mitr"/>
+
                 </LinearLayout>
 
         </LinearLayout>

@@ -38,7 +38,7 @@
                         android:layout_gravity="center"
                         android:layout_marginHorizontal="30dp"
                         android:fontFamily="@font/mitr"
-                        android:text="เพิ่มข้อมูล"
+                        android:text="เพิ่มข้อมูลความดัน"
                         android:textColor="@color/White"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -51,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginHorizontal="20dp"
+                android:layout_marginHorizontal="40dp"
                 android:layout_marginVertical="5dp">
 
                 <Button
@@ -64,40 +64,143 @@
                     android:textColor="@color/Theme"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:padding="10dp"/>
-
-                <Button
-                    android:id="@+id/start_sync_bp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_update_bp"
-                    android:text="เริ่มการเชื่อมต่อข้อมูล"
-                    android:textColor="@color/White"
-                    android:textStyle="bold"
-                    android:textSize="25sp"
                     android:fontFamily="@font/mitr"
-                    android:padding="20dp"
-                    android:layout_marginVertical="30dp"/>
-
-
+                    android:padding="10dp"/>
             </LinearLayout>
+            <Button
+                android:id="@+id/start_sync_bp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_update_bp"
+                android:text="เริ่มการเชื่อมต่อข้อมูล"
+                android:textColor="@color/White"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:fontFamily="@font/mitr"
+                android:padding="20dp"
+                android:layout_marginVertical="30dp"
+                android:layout_marginHorizontal="40dp"/>
 
+            <!--Show state for BloodPressure and HeartRate fuction-->
             <LinearLayout
+                android:id="@+id/expandableViewBTBP"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                android:layout_marginHorizontal="30dp">
-                <Button
-                    android:id="@+id/b1"
+                android:visibility="gone"
+                android:layout_marginHorizontal="40dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_update_bp"
-                    android:text="read last info"
-                    android:textColor="@color/White"
-                    android:textStyle="bold"
-                    android:textSize="25sp"
-                    android:fontFamily="@font/mitr"
-                    android:padding="20dp"/>
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <!-- left : topic -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mitr"
+                            android:text="การค้นหาอุปกรณ์:"
+                            android:textColor="@color/Theme"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mitr"
+                            android:text="อุปกรณ์ที่พบ :"
+                            android:textColor="@color/Theme"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mitr"
+                            android:text="ผลการวัด SYS :"
+                            android:textColor="@color/Theme"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mitr"
+                            android:text="ผลการวัด DIA :"
+                            android:textColor="@color/Theme"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/mitr"
+                            android:text="ผลการวัดชีพจร :"
+                            android:textColor="@color/Theme"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="30dp"
+                        android:layout_gravity="end">
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/mitr"
+                            android:text=""
+                            android:textColor="@color/color0D3244"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/t2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/mitr"
+                            android:text=""
+                            android:textColor="@color/color0D3244"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/t4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/mitr"
+                            android:text=""
+                            android:textColor="@color/color0D3244"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/t5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/mitr"
+                            android:text=""
+                            android:textColor="@color/color0D3244"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/t6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/mitr"
+                            android:text=""
+                            android:textColor="@color/color0D3244"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
                 <Button
                     android:id="@+id/b2"
                     android:layout_width="match_parent"
@@ -106,20 +209,11 @@
                     android:text="read history"
                     android:textColor="@color/White"
                     android:textStyle="bold"
-                    android:textSize="25sp"
+                    android:textSize="22sp"
                     android:fontFamily="@font/mitr"
-                    android:padding="20dp"/>
-                <Button
-                    android:id="@+id/b3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_update_bp"
-                    android:text="clear history"
-                    android:textColor="@color/White"
-                    android:textStyle="bold"
-                    android:textSize="25sp"
-                    android:fontFamily="@font/mitr"
-                    android:padding="20dp"/>
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"/>
+
                 <Button
                     android:id="@+id/b4"
                     android:layout_width="match_parent"
@@ -128,93 +222,11 @@
                     android:text="บันทึก"
                     android:textColor="@color/White"
                     android:textStyle="bold"
-                    android:textSize="25sp"
-                    android:fontFamily="@font/mitr"
-                    android:padding="20dp"/>
-                <Button
-                    android:id="@+id/b5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/btn_update_bp"
-                    android:text="disconnect"
-                    android:textColor="@color/White"
-                    android:textStyle="bold"
-                    android:textSize="25sp"
-                    android:fontFamily="@font/mitr"
-                    android:padding="20dp"/>
-
-                <TextView
-                    android:id="@+id/t1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="30dp"
-                    android:fontFamily="@font/mitr"
-                    android:text="เพิ่มข้อมูล"
-                    android:textColor="@color/Primary"
                     android:textSize="22sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:id="@+id/t2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="30dp"
                     android:fontFamily="@font/mitr"
-                    android:text="เพิ่มข้อมูล"
-                    android:textColor="@color/Primary"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:id="@+id/t4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="30dp"
-                    android:fontFamily="@font/mitr"
-                    android:text="เพิ่มข้อมูล"
-                    android:textColor="@color/Primary"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-                <TextView
-                    android:id="@+id/t5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="30dp"
-                    android:fontFamily="@font/mitr"
-                    android:text="เพิ่มข้อมูล"
-                    android:textColor="@color/Primary"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-                <TextView
-                android:id="@+id/t6"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:layout_marginHorizontal="30dp"
-                android:fontFamily="@font/mitr"
-                android:text="เพิ่มข้อมูล"
-                android:textColor="@color/Primary"
-                android:textSize="22sp"
-                android:textStyle="bold" />
-                <TextView
-                    android:id="@+id/t7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="30dp"
-                    android:fontFamily="@font/mitr"
-                    android:text="เพิ่มข้อมูล"
-                    android:textColor="@color/Primary"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-
-
-
+                    android:padding="10dp"
+                    android:layout_marginVertical="10dp"/>
             </LinearLayout>
-
-
 
 
         </LinearLayout>

@@ -38,7 +38,7 @@
                         android:layout_gravity="center"
                         android:layout_marginHorizontal="30dp"
                         android:fontFamily="@font/mitr"
-                        android:text="เพิ่มข้อมูล"
+                        android:text="เพิ่มข้อมูลน้ำหนัก"
                         android:textColor="@color/White"
                         android:textSize="22sp"
                         android:textStyle="bold" />

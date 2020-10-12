@@ -4,9 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.os.Bundle
+import android.transition.AutoTransition
+import android.transition.TransitionManager
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.android.volley.Request
@@ -18,6 +21,7 @@ import com.ideabus.model.bluetooth.MyBluetoothLE
 import com.ideabus.model.data.*
 import com.ideabus.model.protocol.BPMProtocol
 import kotlinx.android.synthetic.main.bp_bt.*
+import kotlinx.android.synthetic.main.temp_bt.*
 import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
@@ -27,7 +31,9 @@ import java.util.*
 class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
     BPMProtocol.OnDataResponseListener, BPMProtocol.OnNotifyStateListener,
     MyBluetoothLE.OnWriteStateListener {
-    private var button: Button? = null
+
+    private var infoBP : Button? = null
+    var expandableBTBP : LinearLayout? = null
 
 
     private val TAG = "BPMTestActivity"
@@ -47,8 +53,18 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.bp_bt)
-        button = findViewById(R.id.info_bt_bp)
+
+        // how to sync bluetooth btn
+        infoBP = findViewById(R.id.info_bt_bp)
+        expandableBTBP = findViewById(R.id.expandableViewBTBP)
         info_bt_bp.setOnClickListener(View.OnClickListener { openDialog() })
+
+        start_sync_bp.setOnClickListener(View.OnClickListener {
+            if (expandableViewBTBP.getVisibility() == View.GONE) {
+                TransitionManager.beginDelayedTransition(expandableViewBTBP, AutoTransition())
+                expandableViewBTBP.setVisibility(View.VISIBLE)
+            }
+        })
 
 
         b2.setOnClickListener {
@@ -286,7 +302,7 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
                 isConnecting = false
                 //findViewById<View>(R.id.buttonView).visibility = View.VISIBLE
                 //logListAdapter.addLog("Connected")
-                t7.text = "Connected"
+                //t7.text = "Connected"
                 Toast.makeText(applicationContext, "Connected", Toast.LENGTH_SHORT).show()
             }
             BPMProtocol.ConnectState.ConnectTimeout -> {

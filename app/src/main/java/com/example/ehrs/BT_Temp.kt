@@ -19,6 +19,7 @@ import com.android.volley.toolbox.Volley
 import com.ideabus.model.bluetooth.MyBluetoothLE
 import com.ideabus.model.data.ThermoMeasureData
 import com.ideabus.model.protocol.ThermoProtocol
+import kotlinx.android.synthetic.main.bp_bt.*
 import kotlinx.android.synthetic.main.home.*
 import kotlinx.android.synthetic.main.temp_bt.*
 import org.json.JSONObject
@@ -31,7 +32,7 @@ class BT_Temp  : AppCompatActivity(), ThermoProtocol.OnDataResponseListener,
     ThermoProtocol.OnConnectStateListener, ThermoProtocol.OnNotifyStateListener,
     MyBluetoothLE.OnWriteStateListener {
 
-    private var button: Button? = null
+    private var infoTemp : Button? = null
     var expandableViewTemp : LinearLayout? = null
     var startSyncTemp : Button? = null
 
@@ -45,9 +46,11 @@ class BT_Temp  : AppCompatActivity(), ThermoProtocol.OnDataResponseListener,
         initParam()
 
         // how to sync btn
-        button = findViewById(R.id.info_bt_temp)
+        infoTemp = findViewById(R.id.info_bt_temp)
         expandableViewTemp = findViewById(R.id.expandableViewBTTemp)
         startSyncTemp = findViewById(R.id.start_sync_temp)
+
+        info_bt_temp.setOnClickListener(View.OnClickListener { openDialog() })
 
         start_sync_temp.setOnClickListener(View.OnClickListener {
             if (expandableViewBTTemp.getVisibility() == View.GONE) {
