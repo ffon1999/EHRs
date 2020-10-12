@@ -61,7 +61,7 @@
                     android:layout_gravity="end"
                     android:background="#00FFFFFF"
                     android:text="วิธีการใช้งาน"
-                    android:textColor="@color/Theme"
+                    android:textColor="@color/color005680"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/mitr"

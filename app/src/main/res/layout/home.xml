@@ -125,7 +125,7 @@
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="5dp"
                     android:clickable="true"
-                    app:cardBackgroundColor="@color/color00ADFF"
+                    app:cardBackgroundColor="@color/color006C9F"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="5dp">
 
