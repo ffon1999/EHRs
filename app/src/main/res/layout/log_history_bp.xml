@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:text="ประวัติการบันทึกข้อมูล"
                 android:textSize="22sp"
-                android:textColor="@color/Theme"
+                android:textColor="@color/color005680"
                 android:textStyle="bold"
                 android:fontFamily="@font/mitr"
                 android:layout_marginTop="10dp"
@@ -75,22 +75,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginHorizontal="20dp">
+                android:layout_marginHorizontal="40dp"
+                android:background="@drawable/rectangle_bp"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="10dp">
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="5"
                     android:layout_height="wrap_content"
                     android:text="วัน/เดือน/ปี"
-                    android:textColor="@color/Grey"
+                    android:textColor="@color/White"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:fontFamily="@font/mitr" />
+                    android:fontFamily="@font/mitr"
+                    android:paddingStart="5dp"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_weight="2"
                     android:layout_height="wrap_content"
                     android:text="SYS"
-                    android:textColor="@color/Grey"
+                    android:textColor="@color/White"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/mitr"
@@ -100,7 +104,7 @@
                     android:layout_weight="2"
                     android:layout_height="wrap_content"
                     android:text="DIA"
-                    android:textColor="@color/Grey"
+                    android:textColor="@color/White"
                     android:textSize="18sp"
                     android:textStyle="bold"
                     android:fontFamily="@font/mitr"
@@ -112,13 +116,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp">
+                android:layout_margin="25dp">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/history_bp"
                     android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    />
+                    android:layout_height="wrap_content" />
 
 
 
