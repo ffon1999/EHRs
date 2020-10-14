@@ -3,6 +3,7 @@ package com.example.ehrs
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -33,15 +34,20 @@ class HistoryBP :AppCompatActivity() {
         setContentView(R.layout.log_history_bp)
 
         mChart = findViewById(R.id.chart)
+
         /*val mv = MyMarkerView(applicationContext, R.layout.custom_marker_view)
         mv.chartView = mChart*/
         renderData()
 
         callListBP()
+
+
+
     }
 
 
     private fun renderData() {
+
         //set graph height and width
         /*llXAxis = LimitLine(10f, "ค่าความดันเลือด")
         llXAxis.lineWidth = 10f
@@ -77,7 +83,7 @@ class HistoryBP :AppCompatActivity() {
         //leftAxis.removeAllLimitLines()
         leftAxis.addLimitLine(ll1)//add max point line
         leftAxis.addLimitLine(ll2)//add min point line
-        leftAxis.axisMaximum = 200f //set max of y axis
+        leftAxis.axisMaximum = 180f //set max of y axis
         leftAxis.axisMinimum = 0f //set min of y axis
         leftAxis.enableGridDashedLine(10f, 10f, 0f)
         //leftAxis.setDrawZeroLine(false)
@@ -88,6 +94,7 @@ class HistoryBP :AppCompatActivity() {
         mChart!!.axisRight.isEnabled = false //remove chart frame
         setData()
     }
+
     private fun setData() {
 
         val daaa = floatArrayOf(0f,1f,2f,3f,4f,5f,6f)
@@ -224,6 +231,8 @@ class HistoryBP :AppCompatActivity() {
                     dataSets.add(set2)
                     val data = LineData(dataSets)
                     mChart!!.data = data
+                    mChart!!.invalidate()
+
                 }
             },
             Response.ErrorListener {

@@ -171,6 +171,7 @@ class HistoryHeight : AppCompatActivity() {
                     dataSets.add(set1)
                     val data = LineData(dataSets)
                     mChart!!.data = data
+                    mChart!!.invalidate()
                 }
             },
             Response.ErrorListener { Toast.makeText(this, "Something went wrong!! $it", Toast.LENGTH_SHORT).show()

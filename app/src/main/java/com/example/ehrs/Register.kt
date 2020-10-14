@@ -53,7 +53,7 @@ class Register : AppCompatActivity() {
                     try {
                         val obj = response
 
-                        Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
+                        //Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
 
                         val intent = Intent(this,Login::class.java)
                         startActivity(intent)
@@ -65,7 +65,7 @@ class Register : AppCompatActivity() {
                 }, Response.ErrorListener{
                     // Error in request
                     // textView10.text = "Volley error: $it "
-                    Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, "error : $it"  , Toast.LENGTH_SHORT).show()
 
                 })
             que.add(request)

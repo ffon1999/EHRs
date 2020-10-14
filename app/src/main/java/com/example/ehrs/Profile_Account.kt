@@ -57,7 +57,7 @@ class Profile_Account : AppCompatActivity() {
             editor.putString("Email", "")
 
             /**/
-            //editor.clear()
+            editor.clear()
 
             //**---**
             editor.apply()

@@ -73,7 +73,7 @@ class HistoryPR : AppCompatActivity() {
         //leftAxis.removeAllLimitLines()
         leftAxis.addLimitLine(ll1)//add max point line
         leftAxis.addLimitLine(ll2)//add min point line
-        leftAxis.axisMaximum = 200f //set max of y axis
+        leftAxis.axisMaximum = 120f //set max of y axis
         leftAxis.axisMinimum = 0f //set min of y axis
         leftAxis.enableGridDashedLine(10f, 10f, 0f)
         //leftAxis.setDrawZeroLine(false)
@@ -171,6 +171,7 @@ class HistoryPR : AppCompatActivity() {
                     dataSets.add(set1)
                     val data = LineData(dataSets)
                     mChart!!.data = data
+                    mChart!!.invalidate()
                 }
             },
             Response.ErrorListener { Toast.makeText(this, "Something went wrong!! $it", Toast.LENGTH_SHORT).show()
