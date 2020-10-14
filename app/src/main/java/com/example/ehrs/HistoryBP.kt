@@ -43,8 +43,8 @@ class HistoryBP :AppCompatActivity() {
 
 
     private fun renderData() {
-        /*set graph height and width
-        val llXAxis = LimitLine(10f, "ค่าความดันเลือด")
+        //set graph height and width
+        /*llXAxis = LimitLine(10f, "ค่าความดันเลือด")
         llXAxis.lineWidth = 10f
         llXAxis.enableDashedLine(10f, 10f, 0f)
         llXAxis.labelPosition = LimitLine.LimitLabelPosition.RIGHT_BOTTOM
@@ -56,7 +56,9 @@ class HistoryBP :AppCompatActivity() {
         xAxis.axisMaximum = 6f
         xAxis.axisMinimum = 0f
         xAxis.position = XAxis.XAxisPosition.BOTTOM //set x axis position
-        mChart!!.getXAxis().setTextSize(14F);
+        xAxis.setLabelRotationAngle(330f);
+        mChart!!.getXAxis().setTextSize(12F);
+
         //xAxis.setDrawLimitLinesBehindData(true)
         //set min max line
         val ll1 = LimitLine(160f, "")//set max line point
@@ -79,7 +81,9 @@ class HistoryBP :AppCompatActivity() {
         leftAxis.enableGridDashedLine(10f, 10f, 0f)
         //leftAxis.setDrawZeroLine(false)
         //leftAxis.setDrawLimitLinesBehindData(false)
-        mChart!!.getAxisLeft().setTextSize(14F);
+
+        mChart!!.getAxisLeft().setTextSize(12F);
+
         mChart!!.axisRight.isEnabled = false //remove chart frame
         setData()
     }
@@ -167,7 +171,7 @@ class HistoryBP :AppCompatActivity() {
                     set1.lineWidth = 1f
                     set1.circleRadius = 3f //set point size
                     set1.setDrawCircleHole(false) //set hole in point
-                    set1.valueTextSize = 16f//set text above point size
+                    set1.valueTextSize = 12f//set text above point size
                     set1.setDrawFilled(true)//set color fill to chart
                     //set1.formLineWidth = 20f
                     //set1.formLineDashEffect = DashPathEffect(floatArrayOf(50f, 5f), 0f)
@@ -191,7 +195,7 @@ class HistoryBP :AppCompatActivity() {
                     set2.lineWidth = 1f
                     set2.circleRadius = 3f //set point size
                     set2.setDrawCircleHole(false) //set hole in point
-                    set2.valueTextSize = 16f//set text above point size
+                    set2.valueTextSize = 12f//set text above point size
                     set2.setDrawFilled(true)//set color fill to chart
                     //set1.formLineWidth = 20f
                     //set1.formLineDashEffect = DashPathEffect(floatArrayOf(50f, 5f), 0f)

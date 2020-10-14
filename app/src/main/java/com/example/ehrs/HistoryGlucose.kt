@@ -54,15 +54,17 @@ class HistoryGlucose  : AppCompatActivity() {
         xAxis.axisMaximum = 6f
         xAxis.axisMinimum = 0f
         xAxis.position = XAxis.XAxisPosition.BOTTOM //set x axis position
+        xAxis.setLabelRotationAngle(330f);
+        mChart!!.getXAxis().setTextSize(12F);
         //xAxis.setDrawLimitLinesBehindData(true)
         //set min max line
         val ll1 = LimitLine(100f, "Maximum Limit")//set max line point
-        ll1.lineWidth = 4f
+        ll1.lineWidth = 2f
         ll1.enableDashedLine(10f, 10f, 0f)
         ll1.labelPosition = LimitLine.LimitLabelPosition.RIGHT_TOP
         ll1.textSize = 10f
         val ll2 = LimitLine(60f, "Minimum Limit")//set min line point
-        ll2.lineWidth = 4f
+        ll2.lineWidth = 2f
         ll2.enableDashedLine(10f, 10f, 0f)
         ll2.labelPosition = LimitLine.LimitLabelPosition.RIGHT_BOTTOM //set position of Minimum Limit
         ll2.textSize = 10f
@@ -76,6 +78,7 @@ class HistoryGlucose  : AppCompatActivity() {
         leftAxis.enableGridDashedLine(10f, 10f, 0f)
         //leftAxis.setDrawZeroLine(false)
         //leftAxis.setDrawLimitLinesBehindData(false)
+        mChart!!.getAxisLeft().setTextSize(12F);
         mChart!!.axisRight.isEnabled = false //remove chart frame
         setData()
     }
@@ -147,7 +150,7 @@ class HistoryGlucose  : AppCompatActivity() {
                     set1.lineWidth = 1f
                     set1.circleRadius = 3f //set point size
                     set1.setDrawCircleHole(false) //set hole in point
-                    set1.valueTextSize = 16f//set text above point size
+                    set1.valueTextSize = 12f//set text above point size
                     set1.setDrawFilled(true)//set color fill to chart
                     //set1.formLineWidth = 20f
                     //set1.formLineDashEffect = DashPathEffect(floatArrayOf(50f, 5f), 0f)

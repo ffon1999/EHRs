@@ -54,6 +54,8 @@ class HistoryWeight : AppCompatActivity() {
         xAxis.axisMaximum = 6f
         xAxis.axisMinimum = 0f
         xAxis.position = XAxis.XAxisPosition.BOTTOM //set x axis position
+        xAxis.setLabelRotationAngle(330f);
+        mChart!!.getXAxis().setTextSize(12F);
         //xAxis.setDrawLimitLinesBehindData(true)
         //set min max line
         val ll1 = LimitLine(300f, "Maximum Limit")//set max line point
@@ -77,6 +79,7 @@ class HistoryWeight : AppCompatActivity() {
         //leftAxis.setDrawZeroLine(false)
         //leftAxis.setDrawLimitLinesBehindData(false)
         mChart!!.axisRight.isEnabled = false //remove chart frame
+        mChart!!.getAxisLeft().setTextSize(12F);
         setData()
     }
     private fun setData() {
@@ -147,7 +150,7 @@ class HistoryWeight : AppCompatActivity() {
                     set1.lineWidth = 1f
                     set1.circleRadius = 3f //set point size
                     set1.setDrawCircleHole(false) //set hole in point
-                    set1.valueTextSize = 16f//set text above point size
+                    set1.valueTextSize = 12f//set text above point size
                     set1.setDrawFilled(true)//set color fill to chart
                     //set1.formLineWidth = 20f
                     //set1.formLineDashEffect = DashPathEffect(floatArrayOf(50f, 5f), 0f)
