@@ -71,7 +71,7 @@ class HistoryTemperature : AppCompatActivity() {
         //leftAxis.removeAllLimitLines()
         leftAxis.addLimitLine(ll1)//add max point line
         leftAxis.addLimitLine(ll2)//add min point line
-        leftAxis.axisMaximum = 300f //set max of y axis
+        leftAxis.axisMaximum = 50f //set max of y axis
         leftAxis.axisMinimum = 0f //set min of y axis
         leftAxis.enableGridDashedLine(10f, 10f, 0f)
         //leftAxis.setDrawZeroLine(false)

@@ -55,12 +55,13 @@ class HistoryPR : AppCompatActivity() {
         xAxis.position = XAxis.XAxisPosition.BOTTOM //set x axis position
         //xAxis.setDrawLimitLinesBehindData(true)
         //set min max line
-        val ll1 = LimitLine(215f, "Maximum Limit")//set max line point
+
+        val ll1 = LimitLine(500f, "Maximum Limit")//set max line point
         ll1.lineWidth = 4f
         ll1.enableDashedLine(10f, 10f, 0f)
         ll1.labelPosition = LimitLine.LimitLabelPosition.RIGHT_TOP
         ll1.textSize = 10f
-        val ll2 = LimitLine(70f, "Minimum Limit")//set min line point
+        val ll2 = LimitLine(500f, "Minimum Limit")//set min line point
         ll2.lineWidth = 4f
         ll2.enableDashedLine(10f, 10f, 0f)
         ll2.labelPosition = LimitLine.LimitLabelPosition.RIGHT_BOTTOM //set position of Minimum Limit
@@ -70,7 +71,7 @@ class HistoryPR : AppCompatActivity() {
         //leftAxis.removeAllLimitLines()
         leftAxis.addLimitLine(ll1)//add max point line
         leftAxis.addLimitLine(ll2)//add min point line
-        leftAxis.axisMaximum = 300f //set max of y axis
+        leftAxis.axisMaximum = 200f //set max of y axis
         leftAxis.axisMinimum = 0f //set min of y axis
         leftAxis.enableGridDashedLine(10f, 10f, 0f)
         //leftAxis.setDrawZeroLine(false)

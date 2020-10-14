@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.Response
@@ -55,15 +56,16 @@ class HistoryBP :AppCompatActivity() {
         xAxis.axisMaximum = 6f
         xAxis.axisMinimum = 0f
         xAxis.position = XAxis.XAxisPosition.BOTTOM //set x axis position
+        mChart!!.getXAxis().setTextSize(14F);
         //xAxis.setDrawLimitLinesBehindData(true)
         //set min max line
-        val ll1 = LimitLine(215f, "Maximum Limit")//set max line point
-        ll1.lineWidth = 4f
+        val ll1 = LimitLine(160f, "")//set max line point
+        ll1.lineWidth = 2f
         ll1.enableDashedLine(10f, 10f, 0f)
         ll1.labelPosition = LimitLine.LimitLabelPosition.RIGHT_TOP
         ll1.textSize = 10f
-        val ll2 = LimitLine(70f, "Minimum Limit")//set min line point
-        ll2.lineWidth = 4f
+        val ll2 = LimitLine(80f, "")//set min line point
+        ll2.lineWidth = 2f
         ll2.enableDashedLine(10f, 10f, 0f)
         ll2.labelPosition = LimitLine.LimitLabelPosition.RIGHT_BOTTOM //set position of Minimum Limit
         ll2.textSize = 10f
@@ -72,11 +74,12 @@ class HistoryBP :AppCompatActivity() {
         //leftAxis.removeAllLimitLines()
         leftAxis.addLimitLine(ll1)//add max point line
         leftAxis.addLimitLine(ll2)//add min point line
-        leftAxis.axisMaximum = 250f //set max of y axis
+        leftAxis.axisMaximum = 200f //set max of y axis
         leftAxis.axisMinimum = 0f //set min of y axis
         leftAxis.enableGridDashedLine(10f, 10f, 0f)
         //leftAxis.setDrawZeroLine(false)
         //leftAxis.setDrawLimitLinesBehindData(false)
+        mChart!!.getAxisLeft().setTextSize(14F);
         mChart!!.axisRight.isEnabled = false //remove chart frame
         setData()
     }
@@ -155,7 +158,7 @@ class HistoryBP :AppCompatActivity() {
                     //mChart!!.notifyDataSetChanged()
                 } else {
 
-                    set1 = LineDataSet(values, "Sample Data")
+                    set1 = LineDataSet(values, "ความดันค่าบน")
                     set1.setDrawIcons(false)
                     //set1.enableDashedLine(10f, 5f, 0f) //set Dashed line
                     //set1.enableDashedHighlightLine(20f, 5f, 0f)
@@ -179,7 +182,7 @@ class HistoryBP :AppCompatActivity() {
                     //set1.setVisible(false);
                     //set1.setCircleHoleColor(Color.WHITE);
 
-                    set2 = LineDataSet(values2, "Sample Data")
+                    set2 = LineDataSet(values2, "ความดันค่าล่าง")
                     set2.setDrawIcons(false)
                     //set1.enableDashedLine(10f, 5f, 0f) //set Dashed line
                     //set1.enableDashedHighlightLine(20f, 5f, 0f)
