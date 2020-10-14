@@ -55,9 +55,12 @@
 
             <!-- layout show history graph -->
             <LinearLayout
+                android:id="@+id/graph_pr"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_margin="20dp">
+                android:layout_height="500dp"
+                android:layout_marginVertical="5dp"
+                android:layout_marginHorizontal="10dp"
+                android:paddingHorizontal="20dp">
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/chart"
@@ -108,7 +111,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/history_pr"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="500dp"
                     />
 
 

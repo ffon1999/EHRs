@@ -21,7 +21,6 @@ import com.github.mikephil.charting.data.LineDataSet
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet
 import com.github.mikephil.charting.utils.Utils
-import kotlinx.android.synthetic.main.log_history_bp.*
 import kotlinx.android.synthetic.main.log_history_pr.*
 
 class HistoryPR : AppCompatActivity() {
@@ -56,6 +55,7 @@ class HistoryPR : AppCompatActivity() {
         //xAxis.setDrawLimitLinesBehindData(true)
         xAxis.setLabelRotationAngle(330f);
         mChart!!.getXAxis().setTextSize(12F);
+        mChart!!.getXAxis().setDrawGridLines(false);
         //set min max line
 
         val ll1 = LimitLine(500f, "Maximum Limit")//set max line point
@@ -79,6 +79,7 @@ class HistoryPR : AppCompatActivity() {
         //leftAxis.setDrawZeroLine(false)
         //leftAxis.setDrawLimitLinesBehindData(false)
         mChart!!.getAxisLeft().setTextSize(12F);
+        mChart!!.getAxisLeft().setDrawGridLines(false)
         mChart!!.axisRight.isEnabled = false //remove chart frame
         setData()
     }
@@ -147,8 +148,8 @@ class HistoryPR : AppCompatActivity() {
                     //set1.enableDashedHighlightLine(20f, 5f, 0f)
                     set1.color = Color.DKGRAY //set line and Simple Data color
                     set1.setCircleColor(Color.DKGRAY)//set point color
-                    set1.lineWidth = 1f
-                    set1.circleRadius = 3f //set point size
+                    set1.lineWidth = 3f
+                    set1.circleRadius = 4f //set point size
                     set1.setDrawCircleHole(false) //set hole in point
                     set1.valueTextSize = 12f//set text above point size
                     set1.setDrawFilled(true)//set color fill to chart
@@ -160,7 +161,7 @@ class HistoryPR : AppCompatActivity() {
                     set1.cubicIntensity = 0.2f
                     //set color shade to chart
                     if (Utils.getSDKInt() >= 18) {
-                        val drawable = ContextCompat.getDrawable(this, R.drawable.graph_color)
+                        val drawable = ContextCompat.getDrawable(this, R.drawable.pr_color_graph)
                         set1.fillDrawable = drawable
                     } else {
                         set1.fillColor = Color.DKGRAY

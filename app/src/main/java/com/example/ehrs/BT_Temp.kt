@@ -80,7 +80,7 @@ class BT_Temp  : AppCompatActivity(), ThermoProtocol.OnDataResponseListener,
 
             }
             else{
-                Toast.makeText(applicationContext, "No data", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, "No data", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -107,7 +107,7 @@ class BT_Temp  : AppCompatActivity(), ThermoProtocol.OnDataResponseListener,
             return
         }
         startScan.text = "กำลังค้นหาอุปกรณ์"
-        Toast.makeText(applicationContext, "start scan", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(applicationContext, "start scan", Toast.LENGTH_SHORT).show()
         //logListAdapter.addLog("start scan");
         /* set delay time 5 second*/
         Global.thermoProtocol.startScan(5)
@@ -139,10 +139,13 @@ class BT_Temp  : AppCompatActivity(), ThermoProtocol.OnDataResponseListener,
     override fun onBtStateChanged(isEnable: Boolean) {
         //BLE will be returned when it is turned enable or disable
         if (isEnable) {
-            Toast.makeText(this, "BLE is enable!!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "BLE is enable!!", Toast.LENGTH_SHORT).show()
             startScan()
-        } else Toast.makeText(this, "BLE is disable!!", Toast.LENGTH_SHORT).show()
+        } else {
+            //Toast.makeText(this, "BLE is disable!!", Toast.LENGTH_SHORT).show()
+            }
     }
+
     override fun onScanResult(mac: String, name: String, rssi: Int) {
         //Temperature
         if (!name.startsWith("n/a")) {
@@ -233,7 +236,7 @@ class BT_Temp  : AppCompatActivity(), ThermoProtocol.OnDataResponseListener,
 
                 try {
                     val obj = response
-                    Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
 
                     editor.putFloat("NumberTemp",body_temperature)
                     editor.apply()
@@ -249,7 +252,7 @@ class BT_Temp  : AppCompatActivity(), ThermoProtocol.OnDataResponseListener,
 
             }, Response.ErrorListener{
 
-                Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
 
             })
         que.add(request)

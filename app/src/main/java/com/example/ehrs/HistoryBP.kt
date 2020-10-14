@@ -7,7 +7,6 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import androidx.core.view.get
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.volley.Request
 import com.android.volley.Response
@@ -58,18 +57,20 @@ class HistoryBP :AppCompatActivity() {
         xAxis.position = XAxis.XAxisPosition.BOTTOM //set x axis position
         xAxis.setLabelRotationAngle(330f);
         mChart!!.getXAxis().setTextSize(12F);
+        mChart!!.getXAxis().setDrawGridLines(false);
+
 
         //xAxis.setDrawLimitLinesBehindData(true)
         //set min max line
-        val ll1 = LimitLine(160f, "")//set max line point
+        val ll1 = LimitLine(160f, "SYS")//set max line point
         ll1.lineWidth = 2f
         ll1.enableDashedLine(10f, 10f, 0f)
-        ll1.labelPosition = LimitLine.LimitLabelPosition.RIGHT_TOP
+        ll1.labelPosition = LimitLine.LimitLabelPosition.LEFT_TOP
         ll1.textSize = 10f
-        val ll2 = LimitLine(80f, "")//set min line point
+        val ll2 = LimitLine(80f, "DIA")//set min line point
         ll2.lineWidth = 2f
         ll2.enableDashedLine(10f, 10f, 0f)
-        ll2.labelPosition = LimitLine.LimitLabelPosition.RIGHT_BOTTOM //set position of Minimum Limit
+        ll2.labelPosition = LimitLine.LimitLabelPosition.LEFT_BOTTOM //set position of Minimum Limit
         ll2.textSize = 10f
         //set y axis
         val leftAxis = mChart!!.axisLeft
@@ -83,7 +84,7 @@ class HistoryBP :AppCompatActivity() {
         //leftAxis.setDrawLimitLinesBehindData(false)
 
         mChart!!.getAxisLeft().setTextSize(12F);
-
+        mChart!!.getAxisLeft().setDrawGridLines(false)
         mChart!!.axisRight.isEnabled = false //remove chart frame
         setData()
     }
@@ -95,7 +96,7 @@ class HistoryBP :AppCompatActivity() {
         var daaa3 = floatArrayOf(0f,0f,0f,0f,0f,0f,0f)
         var xAxisLabels = mutableListOf("1", "2", "3", "4", "5", "6" ,"7") // set text to x axis
         var dataday= mutableListOf("1", "2", "3", "4", "5", "6" ,"7")
-        //val oo =      calldata()
+        //val oo = calldata()
         val url = "https://ehr-system-project.herokuapp.com/api/examination/graph/bloodp/"
         val sharedPreferences = getSharedPreferences("User_Info", Context.MODE_PRIVATE)
         val username =sharedPreferences.getString("Username","Username")
@@ -162,14 +163,14 @@ class HistoryBP :AppCompatActivity() {
                     //mChart!!.notifyDataSetChanged()
                 } else {
 
-                    set1 = LineDataSet(values, "ความดันค่าบน")
+                    set1 = LineDataSet(values, "SYS")
                     set1.setDrawIcons(false)
                     //set1.enableDashedLine(10f, 5f, 0f) //set Dashed line
                     //set1.enableDashedHighlightLine(20f, 5f, 0f)
-                    set1.color = Color.DKGRAY //set line and Simple Data color
-                    set1.setCircleColor(Color.DKGRAY)//set point color
-                    set1.lineWidth = 1f
-                    set1.circleRadius = 3f //set point size
+                    set1.color = Color.BLUE //set line and Simple Data color
+                    set1.setCircleColor(Color.BLUE)//set point color
+                    set1.lineWidth = 3f
+                    set1.circleRadius = 4f //set point size
                     set1.setDrawCircleHole(false) //set hole in point
                     set1.valueTextSize = 12f//set text above point size
                     set1.setDrawFilled(true)//set color fill to chart
@@ -186,14 +187,14 @@ class HistoryBP :AppCompatActivity() {
                     //set1.setVisible(false);
                     //set1.setCircleHoleColor(Color.WHITE);
 
-                    set2 = LineDataSet(values2, "ความดันค่าล่าง")
+                    set2 = LineDataSet(values2, "DIA")
                     set2.setDrawIcons(false)
                     //set1.enableDashedLine(10f, 5f, 0f) //set Dashed line
                     //set1.enableDashedHighlightLine(20f, 5f, 0f)
-                    set2.color = Color.RED//set line and Simple Data color
-                    set2.setCircleColor(Color.DKGRAY)//set point color
-                    set2.lineWidth = 1f
-                    set2.circleRadius = 3f //set point size
+                    set2.color = Color.CYAN//set line and Simple Data color
+                    set2.setCircleColor(Color.CYAN)//set point color
+                    set2.lineWidth = 3f
+                    set2.circleRadius = 4f //set point size
                     set2.setDrawCircleHole(false) //set hole in point
                     set2.valueTextSize = 12f//set text above point size
                     set2.setDrawFilled(true)//set color fill to chart
@@ -208,9 +209,11 @@ class HistoryBP :AppCompatActivity() {
 
                     //set color shade to chart
                     if (Utils.getSDKInt() >= 18) {
-                        val drawable = ContextCompat.getDrawable(this, R.drawable.graph_color)
-                        set1.fillDrawable = drawable
-                        set2.fillDrawable = drawable
+                        val drawSYSgraph = ContextCompat.getDrawable(this, R.drawable.sys_color_line)
+                        val drawaDIAgraph = ContextCompat.getDrawable(this, R.drawable.dia_color_line)
+
+                        set1.fillDrawable = drawSYSgraph
+                        set2.fillDrawable = drawaDIAgraph
                     } else {
                         set1.fillColor = Color.DKGRAY
                         set2.fillColor = Color.DKGRAY
@@ -223,7 +226,8 @@ class HistoryBP :AppCompatActivity() {
                     mChart!!.data = data
                 }
             },
-            Response.ErrorListener { Toast.makeText(this, "Something went wrong!! $it", Toast.LENGTH_SHORT).show()
+            Response.ErrorListener {
+                Toast.makeText(this, "Something went wrong!! $it", Toast.LENGTH_SHORT).show()
                 Log.e("eeee","$it")
             })
 
@@ -260,7 +264,8 @@ class HistoryBP :AppCompatActivity() {
 
                 }
             },
-            Response.ErrorListener { Toast.makeText(this, "Something went wrong!! $it", Toast.LENGTH_SHORT).show()
+            Response.ErrorListener {
+                Toast.makeText(this, "Something went wrong!! $it", Toast.LENGTH_SHORT).show()
                 Log.e("eeee","$it")
             })
 

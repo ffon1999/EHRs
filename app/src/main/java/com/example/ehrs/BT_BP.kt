@@ -96,7 +96,7 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
                 } } }
             }
             else{
-                Toast.makeText(applicationContext, "No data", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, "No data", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -142,8 +142,8 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
             return
         }
 
-        t1.text ="start scan"
-        Toast.makeText(applicationContext, "start scan", Toast.LENGTH_SHORT).show()
+        t1.text ="กำลังค้นหาอุปกรณ์"
+        //Toast.makeText(applicationContext, "กำลังค้นหาอุปกรณ์", Toast.LENGTH_SHORT).show()
         //logListAdapter.addLog("start scan")
         Global.bpmProtocol.startScan(10)
     }
@@ -154,7 +154,7 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
     }
     override fun onWriteMessage(isSuccess: Boolean, message: String) {
         //logListAdapter.addLog("WRITE : $message")
-        Toast.makeText(applicationContext, "WRITE : $message", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(applicationContext, "WRITE : $message", Toast.LENGTH_SHORT).show()
     }
     override fun onNotifyMessage(message: String) {
         //logListAdapter.addLog("NOTIFY : $message")
@@ -261,10 +261,10 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
     override fun onBtStateChanged(isEnable: Boolean) {
         //BLE will be returned when it is turned enable or disable
         if (isEnable) {
-            Toast.makeText(this, "BLE is enable!!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "BLE is enable!!", Toast.LENGTH_SHORT).show()
             startScan()
         } else {
-            Toast.makeText(this, "BLE is disable!!", Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "BLE is disable!!", Toast.LENGTH_SHORT).show()
         }
     }
     override fun onScanResult(mac: String, name: String, rssi: Int) {
@@ -303,19 +303,19 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
                 //findViewById<View>(R.id.buttonView).visibility = View.VISIBLE
                 //logListAdapter.addLog("Connected")
                 //t7.text = "Connected"
-                Toast.makeText(applicationContext, "Connected", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, "Connected", Toast.LENGTH_SHORT).show()
             }
             BPMProtocol.ConnectState.ConnectTimeout -> {
                 isConnecting = false
                 //findViewById<View>(R.id.buttonView).visibility = View.GONE
                 //logListAdapter.addLog("ConnectTimeout")
-                Toast.makeText(applicationContext, "ConnectTimeout", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, "ConnectTimeout", Toast.LENGTH_SHORT).show()
             }
             BPMProtocol.ConnectState.Disconnect -> {
                 isConnecting = false
                 //findViewById<View>(R.id.buttonView).visibility = View.GONE
                 //logListAdapter.addLog("Disconnected")
-                Toast.makeText(applicationContext, "Disconnected", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, "Disconnected", Toast.LENGTH_SHORT).show()
                 startScan()
             }
             BPMProtocol.ConnectState.ScanFinish -> {
@@ -380,7 +380,7 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
 
                 try {
                     val obj = response
-                    Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(applicationContext, "Volley $response "  , Toast.LENGTH_SHORT).show()
                     editor.putInt("NumberBPHeight",systolic_blood_pressure)
                     editor.putInt("NumberBPLow",diastolic_blood_pressure)
                     editor.putInt("NumberPR",heart_rate)
@@ -399,7 +399,7 @@ class BT_BP : AppCompatActivity(), BPMProtocol.OnConnectStateListener,
 
             }, Response.ErrorListener{
 
-                Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
+                //Toast.makeText(applicationContext, "Volley error $it"  , Toast.LENGTH_SHORT).show()
 
             })
         que.add(request)
