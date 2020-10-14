@@ -141,7 +141,7 @@ class HistoryPR : AppCompatActivity() {
                     //mChart!!.data.notifyDataChanged()
                     //mChart!!.notifyDataSetChanged()
                 } else {
-                    set1 = LineDataSet(values, "Sample Data")
+                    set1 = LineDataSet(values, "อัตราการเต้นหัวใจ")
                     set1.setDrawIcons(false)
                     //set1.enableDashedLine(10f, 5f, 0f) //set Dashed line
                     //set1.enableDashedHighlightLine(20f, 5f, 0f)
