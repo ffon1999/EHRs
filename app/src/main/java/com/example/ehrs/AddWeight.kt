@@ -60,9 +60,15 @@ class AddWeight   : AppCompatActivity() {
                 //Log.d("answer",answer)
             } else {
                 var date = Date()
-                val formatter = SimpleDateFormat("MMM dd yyyy HH:mma")
+                val formatter = SimpleDateFormat("MM dd yyyy HH:mm:ss")
+                val formatterdate = SimpleDateFormat("dd.MM.yyyy")
+                val formattertime = SimpleDateFormat("HH:mm:ss")
+
                 val answer: String = formatter.format(date)
-                Log.d("answer",answer)
+                val answerdate: String = formatterdate.format(date)
+                val answertime: String = formattertime.format(date)
+                answerdate1 = answerdate
+                answertime2 = answertime
             }
 
             /*   set Date to JSONObject */
